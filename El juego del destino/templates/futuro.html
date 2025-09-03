@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Destino ha sido Revelado</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div style="text-align:center;margin-bottom:18px;">
+            <span style="display:inline-block;background:#facc15;border-radius:50%;width:48px;height:48px;line-height:48px;">
+                <i class="fa-solid fa-sun" style="color:#fff;font-size:28px;vertical-align:middle;"></i>
+            </span>
+        </div>
+        <h2 style="margin-bottom:8px;">Tu Destino ha sido Revelado</h2>
+        <div class="star"><i class="fa-solid fa-star"></i></div>
+        <div class="section desc"><i class="fa-solid fa-heart" style="color:#22c55e;margin-right:8px;"></i> {{ destiny_message }}</div>
+        <div style="display:flex;gap:16px;justify-content:center;">
+            <div class="section" style="flex:1;min-width:120px;">
+                <b><i class="fa-solid fa-palette"></i> Tu Color</b><br>
+                <div style="margin:10px auto;width:30px;height:30px;border-radius:50%;background:{{ color }};border:2px solid #eaeafc;"></div>
+                <span>{{ color_desc|safe }}</span>
+            </div>
+            <div class="section" style="flex:1;min-width:120px;">
+                <b><i class="fa-solid fa-paw"></i> Tu Animal</b><br>
+                <span>{{ animal_desc|safe }}</span>
+            </div>
+        </div>
+        <div class="section">
+            <b><i class="fa-solid fa-hashtag"></i> Tu número de la suerte</b>
+            <div class="circle">{{ numero_suerte }}</div>
+            <span>Este número te acompañará en momentos importantes.</span>
+        </div>
+        <div class="section"><i class="fa-solid fa-calendar"></i> {{ edad_msg|safe }}</div>
+        <form method="get" action="/">
+                  <button class="btn" type="submit" style="background:linear-gradient(90deg,#7c3aed 60%,#a78bfa 100%);color:#fff;font-weight:600;font-size:1.1rem;">
+                <i class="fa-solid fa-rotate"></i> Consultar de nuevo
+            </button>
+        </form>
+        <div class="footer">Las estrellas te han hablado hoy: {{ nombre }}.</div>
+    </div>
+</body>
+</html>

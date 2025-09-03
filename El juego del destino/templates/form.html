@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Juego del Destino</title>
+    <style>
+        body { background: #18182a; color: #fff; font-family: Arial, sans-serif; }
+        .container { max-width: 400px; margin: 60px auto; background: #23234a; border-radius: 20px; padding: 30px; box-shadow: 0 0 20px #222; }
+        h2 { text-align: center; margin-bottom: 20px; }
+        label { display: block; margin-top: 15px; }
+        input { width: 100%; padding: 8px; border-radius: 8px; border: none; margin-top: 5px; }
+        button { width: 100%; background: #7c3aed; color: #fff; border: none; padding: 12px; border-radius: 8px; font-size: 16px; margin-top: 25px; cursor: pointer; }
+        button:hover { background: #a78bfa; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>El Juego del Destino</h2>
+        <form method="post">
+            <label>Tu nombre
+                <input type="text" name="nombre" required>
+            </label>
+            <label>Tu edad
+                <input type="number" name="edad" required min="1">
+            </label>
+            <label>Tu color favorito
+                <input type="text" name="color" placeholder="Ej. rojo, azul, verde, morado, amarillo..." required>
+            </label>
+            <label>Tu animal favorito
+                <input type="text" name="animal" placeholder="Ej. perro, gato, águila, león, delfín..." required>
+            </label>
+            <button type="submit">Revelar mi destino</button>
+        </form>
+    </div>
+</body>
+</html>

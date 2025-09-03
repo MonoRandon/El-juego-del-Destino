@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Destino ha sido Revelado</title>
+    <style>
+        body { background: #18182a; color: #fff; font-family: Arial, sans-serif; }
+        .container { max-width: 500px; margin: 60px auto; background: #23234a; border-radius: 20px; padding: 30px; box-shadow: 0 0 20px #222; }
+        h2 { text-align: center; margin-bottom: 20px; }
+        .star { color: #22c55e; font-size: 30px; text-align: center; }
+        .section { background: #fff; color: #23234a; border-radius: 12px; padding: 18px; margin: 18px 0; text-align: center; }
+        .desc { margin-bottom: 10px; }
+        .circle { width: 60px; height: 60px; background: #7c3aed; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; margin: 0 auto 10px auto; }
+        .btn { width: 100%; background: #7c3aed; color: #fff; border: none; padding: 12px; border-radius: 8px; font-size: 16px; margin-top: 25px; cursor: pointer; }
+        .btn:hover { background: #a78bfa; }
+        .footer { text-align: center; margin-top: 20px; font-size: 13px; color: #aaa; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Tu Destino ha sido Revelado</h2>
+        <div class="star">&#9733;</div>
+        <div class="section desc">{{ destiny_message }}</div>
+        <div class="section">
+            <b>Tu Color</b><br>
+            <div style="margin:10px auto;width:30px;height:30px;border-radius:50%;background:{{ color }};"></div>
+            <span>{{ color_desc|safe }}</span>
+        </div>
+        <div class="section">
+            <b>Tu Animal</b><br>
+            <span>{{ animal_desc|safe }}</span>
+        </div>
+        <div class="section">
+            <b>Tu número de la suerte</b>
+            <div class="circle">{{ numero_suerte }}</div>
+            <span>Este número te acompañará en momentos importantes.</span>
+        </div>
+        <div class="section">{{ edad_msg|safe }}</div>
+        <form method="get" action="/">
+            <button class="btn" type="submit">Consultar de nuevo</button>
+        </form>
+        <div class="footer">Las estrellas te han hablado hoy: {{ nombre }}.</div>
+    </div>
+</body>
+</html>

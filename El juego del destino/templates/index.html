@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Juego del Destino</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div style="text-align:center;margin-bottom:18px;">
+            <span style="display:inline-block;background:#7c3aed;border-radius:50%;width:48px;height:48px;line-height:48px;">
+                <i class="fa-solid fa-moon" style="color:#fff;font-size:28px;vertical-align:middle;"></i>
+            </span>
+        </div>
+        <h2 style="margin-bottom:8px;">El Juego del Destino</h2>
+        <div style="text-align:center;color:#b3b3d1;margin-bottom:18px;font-size:1.1rem;">Descubre qué te depara el futuro</div>
+        <form method="post">
+            <label><i class="fa-solid fa-user"></i> Tu nombre
+                <input type="text" name="nombre" required>
+            </label>
+            <label><i class="fa-solid fa-calendar"></i> Tu edad
+                <input type="number" name="edad" required min="1">
+            </label>
+            <label><i class="fa-solid fa-palette"></i> Tu color favorito
+                <input type="text" name="color" placeholder="Ej. rojo, azul, verde, morado, amarillo..." required>
+            </label>
+            <label><i class="fa-solid fa-paw"></i> Tu animal favorito
+                <input type="text" name="animal" placeholder="Ej. perro, gato, águila, león, delfín..." required>
+            </label>
+            <div style="text-align:center;margin:30px 0 10px 0;">
+                <span style="display:inline-block;background:linear-gradient(135deg,#a78bfa,#7c3aed);border-radius:50%;width:70px;height:70px;box-shadow:0 2px 8px rgba(44,44,84,0.12);">
+                    <i class="fa-solid fa-crystal-ball" style="color:#fff;font-size:38px;line-height:70px;vertical-align:middle;"></i>
+                </span>
+            </div>
+            <button type="submit" style="background:linear-gradient(90deg,#7c3aed 60%,#a78bfa 100%);color:#fff;font-weight:600;font-size:1.1rem;">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Revelar mi destino
+            </button>
+        </form>
+    </div>
+</body>
+</html>
